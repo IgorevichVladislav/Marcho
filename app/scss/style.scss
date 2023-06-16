@@ -1,11 +1,83 @@
-@import 'vars';
-@import 'fonts';
-@import 'reset';
-@import 'global';
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "global";
+.header {
+  padding: 40px 0;
+  .logo__img {
+    width: 180px;
+    height: 33px;
+  }
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__item {
+      text-transform: uppercase;
+    }
+    &__item + .menu__item {
+      padding-left: 35px;
+    }
+    &__list {
+      display: flex;
+    }
+    &__link {
+      color: $titleColor;
+      padding-bottom: 1px;
+      transition: border-bottom 0.9s;
+      &:hover {
+        color: $accentColor;
+        border-bottom: 1px solid $accentColor;
+      }
+    }
+    &__link--active {
+      color: $accentColor;
+      border-bottom: 1px solid $accentColor;
+    }
+  }
+}
+.user-nav__list {
+  display: flex;
+}
+.user-nav__item + .user-nav__item {
+  padding-left: 35px;
+}
+
+.user-nav__link {
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: relative;
+}
+  .user-nav__num {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $accentColor;
+    color:#fff;
+    font-size: 12px;
+    text-align: center;
+    line-height: 20px;
+    position: absolute;
+    top:-9px;
+    right: -14px;
+  }
 
 
+.user-nav__link--user {
+  background-image: url("../images/icons/user.svg");
+}
+.user-nav__link--search {
+  background-image: url("../images/icons/search.svg");
+}
+.user-nav__link--like {
+  background-image: url("../images/icons/like_icon.svg");
+}
+.user-nav__link--cart {
+  background-image: url("../images/icons/cart_icon.svg");
+}
 
-
-
-
-@import 'media';
+@import "_media";

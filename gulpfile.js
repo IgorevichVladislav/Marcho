@@ -32,7 +32,7 @@ function pages() {
 }
 
 function fonts() {
-  return src("app/fonts/srs/*.*")
+  return src("app/fonts/src/*.*")
   .pipe(fonter({
     formats: ['woff', 'ttf']
   }))
@@ -104,10 +104,9 @@ function watching() {
         browserSync.init({
           server: {
             baseDir: "app/",
-          },
-          notify: false // убирает показ уведомлений
+          }
         });
-  watch(["app/scss/**./*.scss"], styles); // когда произойдут изменения, запускается функция styles
+  watch(["app/scss/**/*.scss"], styles); // когда произойдут изменения, запускается функция styles
   watch(["app/images/src/"], images); // когда произойдут изменения, запускается функция images
   watch(["app/js/**/*.js", '!app/js/main.min.js'], scripts); // когда произойдут изменения, запускается функция scripts
   watch(["app/components/*", 'app/pages/*'], pages); // когда произойдут изменения, запускается функция pages
