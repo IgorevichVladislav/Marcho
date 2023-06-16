@@ -1,0 +1,98 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+ul,
+ol {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  outline: transparent;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  outline: transparent;
+}
+
+address {
+  font-style: normal;
+}
+
+cite {
+  font-style: normal;
+}
+
+button {
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+body {
+  color: #29282d;
+  font-size: 16px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.menu {
+  display: flex;
+}
+.menu__item {
+  display: flex;
+}
+
+.logo__img {
+  width: 180px;
+  height: 33px;
+}/*# sourceMappingURL=style.css.map */
