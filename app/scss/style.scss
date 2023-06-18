@@ -24,15 +24,18 @@
     &__link {
       color: $titleColor;
       padding-bottom: 1px;
+      @extend %quicksand-400;
       transition: border-bottom 0.9s;
       &:hover {
         color: $accentColor;
         border-bottom: 1px solid $accentColor;
+        @extend %quicksand-500;
       }
     }
     &__link--active {
       color: $accentColor;
       border-bottom: 1px solid $accentColor;
+      @extend %quicksand-500;
     }
   }
 }
