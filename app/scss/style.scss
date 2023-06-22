@@ -4,10 +4,7 @@
 @import "global";
 .header {
   padding: 40px 0;
-  .logo__img {
-    width: 180px;
-    height: 33px;
-  }
+}
   .menu {
     display: flex;
     justify-content: space-between;
@@ -38,7 +35,6 @@
       @extend %quicksand-500;
     }
   }
-}
 .user-nav__list {
   display: flex;
 }
