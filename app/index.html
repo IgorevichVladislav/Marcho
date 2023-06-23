@@ -64,23 +64,32 @@
 </body>
 <footer class="footer">
   <div class="container">
-    <div class="footer__top">
+    <div class="footer-top">
       <adress class="adress">
-        <a class="logo" href="#">
+        <a class="adress__footer-logo" href="#">
           <img src="images/src/logo.svg" alt="Логотип" class="logo__img" />
         </a>
-        <a class="footer__top-adress" href="#">
-          No. 342 - London Oxford Street, 012 United States
-        </a>
-        <a class="footer__top-adress" href="mailto:Youremail@gmail.com">
-          Youremail@gmail.com
-        </a>
-        <a class="footer__top-adress" href="tel:+0283 838 8393">
-          +0283 838 8393
-        </a>
-        <ul class="footer__top-social">
-          <li class="footer__top-social_icons">
-            <a class="footer__top-social_link" href="#">
+        <ul class="contact__list">
+          <li class="contact__item">
+            <a class="footer-top__adress" href="#">
+              No. 342 - London Oxford Street, 012 United States
+            </a>
+          </li>
+          <li class="contact__item">
+            <a class="footer-top__adress" href="mailto:Youremail@gmail.com">
+              Youremail@gmail.com
+            </a>
+          </li>
+          <li class="contact__item">
+            <a class="footer-top__adress" href="tel:+0283 838 8393">
+              +0283 838 8393
+            </a>
+          </li>
+        </ul>
+
+        <ul class="footer-top__social">
+          <li class="footer-top__social-icons">
+            <a class="footer-top__social-link" href="#">
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25px"
                 height="18px" viewBox="0 0 18 13" version="1.1">
                 <g>
@@ -90,8 +99,8 @@
               </svg>
             </a>
           </li>
-          <li class="footer__top-social_icons">
-            <a class="footer__top-social_link" href="#">
+          <li class="footer-top__social-icons">
+            <a class="footer-top__social-link" href="#">
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16px"
                 height="16px" viewBox="0 0 16 16" version="1.1">
                 <g>
@@ -101,8 +110,8 @@
               </svg>
             </a>
           </li>
-          <li class="footer__top-social_icons">
-            <a class="footer__top-social_link" href="#">
+          <li class="footer-top__social-icons">
+            <a class="footer-top__social-link" href="#">
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14px"
                 height="16px" viewBox="0 0 14 16" version="1.1">
                 <g id="surface1">
@@ -112,8 +121,8 @@
               </svg>
             </a>
           </li>
-          <li class="footer__top-social_icons">
-            <a class="footer__top-social_link" href="#">
+          <li class="footer-top__social-icons">
+            <a class="footer-top__social-link" href="#">
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15px"
                 height="16px" viewBox="0 0 15 16" version="1.1">
                 <g id="surface1">
@@ -123,8 +132,8 @@
               </svg>
             </a>
           </li>
-          <li class="footer__top-social_icons">
-            <a class="footer__top-social_link" href="#">
+          <li class="footer-top__social-icons">
+            <a class="footer-top__social-link" href="#">
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12px"
                 height="16px" viewBox="0 0 12 16" version="1.1">
                 <g id="surface1">
@@ -136,23 +145,23 @@
           </li>
         </ul>
       </adress>
-      <div class="footer__top-wrapper">
-        <h6 class="footer__top-title">Useful Links</h6>
-        <ul class="footer__top-list">
-          <li class="footer__top-item">
-            <a class="footer__top-link" href="#">About Us</a>
+      <div class="footer-top__wrapper">
+        <h6 class="footer-top__title">Useful Links</h6>
+        <ul class="footer-top__list">
+          <li class="footer-top__item">
+            <a class="footer-top__link" href="#">About Us</a>
           </li>
-          <li class="footer__top-item">
-            <a class="footer__top-link" href="#">Privacy Policy</a>
+          <li class="footer-top__item">
+            <a class="footer-top__link" href="#">Privacy Policy</a>
           </li>
-          <li class="footer__top-item">
-            <a class="footer__top-link" href="#">Terms & Conditions</a>
+          <li class="footer-top__item">
+            <a class="footer-top__link" href="#">Terms & Conditions</a>
           </li>
-          <li class="footer__top-item">
-            <a class="footer__top-link" href="#">Contact Us</a>
+          <li class="footer-top__item">
+            <a class="footer-top__link" href="#">Contact Us</a>
           </li>
-          <li class="footer__top-item">
-            <a class="footer__top-link" href="#">Help & Support</a>
+          <li class="footer-top__item">
+            <a class="footer-top__link" href="#">Help & Support</a>
           </li>
         </ul>
       </div>
@@ -176,18 +185,19 @@
           </li>
         </ul>
       </div>
-      <div class="footer-top__wrapper">
+      <div class="footer-top__wrapper footer-top__wrapper-form">
         <h6 class="footer-top__title">Subscribe Our Newsletter</h6>
+        <p class="footer-top__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
+          suspendisse ultrices gravida.
+        </p>
+        <foorm class="footer-top__form">
+          <input class="footer-top__input" type="email" placeholder="Your email address" required />
+          <button class="footer-top__button" type="submit">Subscribe</button>
+        </foorm>
       </div>
-      <p class="footer-top__text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
-        suspendisse ultrices gravida.
-      </p>
-      <foorm class="footer-top__form">
-        <input class="footer-top__input" type="email" placeholder="Your email address" required />
-        <button class="footer-top__button" type="submit">Subscribe</button>
-      </foorm>
+
     </div>
     <div class="footer-botom">
       <p>© 2019 CodeAstrology. All Rights Reserved.</p>

@@ -11,3 +11,9 @@ line-height: 26px;
     padding: 0 15px;
 
 }
+a{
+    font-size: 16px;
+    line-height: 36px;
+    color: $defaultColor;
+    @extend %quicksand-500;
+}

@@ -65,7 +65,6 @@
     right: -14px;
   }
 
-
 .user-nav__link--user {
   background-image: url("../images/icons/user.svg");
 }
@@ -78,5 +77,42 @@
 .user-nav__link--cart {
   background-image: url("../images/icons/cart_icon.svg");
 }
+
+footer{
+  background-color: $bg;
+}
+
+.footer-top{
+  padding: 70px 0 40px;
+  border-bottom: 1px solid #ececec;
+  display: flex;
+&__wrapper{
+  width: 170px;
+}
+&__wrapper-form{
+  width: 470px;
+}
+}
+&__title{
+  margin-bottom: 40px;
+  font-size: 22px;
+}
+
+
+.footer-top__wrapper:not(:last-child){
+  margin-right: 30px;
+}
+.adress{
+  width: 250px;
+  max-width: 100%;
+  margin-right: 50px;
+  &__footer-logo{
+    display: inline-block;
+    margin-bottom: 33px;
+    }
+}
+
+
+
 
 @import "_media";
