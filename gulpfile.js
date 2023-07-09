@@ -43,8 +43,9 @@ function fonts() {
 
 function scripts() {
   return src(
-    ["node_modules/swiper/swiper-bundle.js", //подключаем swiper плагин
-    "node_modules/jquery/dist/jquery.js",
+    ["node_modules/jquery/dist/jquery.js",
+    "node_modules/swiper/swiper-bundle.js", //подключаем swiper плагин
+    "node_modules/slick-carousel/slick/slick.js", //подключаем slick плагин
     "app/js/main.js"])
     //'app/js/*.js',
     //'!app/js/main.min.js' - использовать все js файлы, кроме main.min.js
@@ -65,15 +66,15 @@ function styles() {
 }
 
 function images() {
-    return src("app/images/src/*.*", "!app/images/src/*.svg")
+    return src("app/images/src/**/*.*", "!app/images/src/*.svg")
     .pipe(newer("app/images/dist")) // проверяет изображения в конечной папке, чтобы повторно не сжимать
     .pipe(avif({quality: 80})) // метод преобразования в avif и качество изображение от 0 до 100
 
-    .pipe(src("app/images/src/*.*")) // для webp не нужно указывать исключение svg
+    .pipe(src("app/images/src/**/*.*")) // для webp не нужно указывать исключение svg
     .pipe(newer("app/images/dist")) // проверяет изображения в конечной папке, чтобы повторно не сжимать
     .pipe(webp()) // указывается метод преобразования в другое изображение
 
-    .pipe(src("app/images/src/*.*"))
+    .pipe(src("app/images/src/**/*.*"))
     .pipe(newer("app/images/dist")) // проверяет изображения в конечной папке, чтобы повторно не сжимать
     .pipe(imagemin([imagemin.gifsicle({interlaced: true}), // указывается метод преобразования в другое изображение
       imagemin.mozjpeg({quality: 75, progressive: true}),
