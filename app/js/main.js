@@ -1,7 +1,9 @@
-const a = 20;
-const b = 5;
-
-function sum () {
-    return 
-    с = a+b;
-}
+$(function () {
+  $(".top-slider__inner").slick({
+    dots: true,
+    arrows: false,
+    fade: true,
+    autoplay: true,
+    autoplaySpeed: 2500
+  });
+});

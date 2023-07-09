@@ -1,6 +1,7 @@
 @import "vars";
 @import "fonts";
 @import "reset";
+@import "libs";
 @import "global";
 .header {
   padding: 40px 0;
@@ -21,12 +22,12 @@
   &__link {
     color: $titleColor;
     padding-bottom: 1px;
-    @extend %quicksand-400;
+    @extend %roboto-400;
     transition: border-bottom 0.9s;
     &:hover {
       color: $accentColor;
       border-bottom: 1px solid $accentColor;
-      @extend %quicksand-500;
+      @extend %roboto-700;
     }
   }
   &__link--active {
@@ -76,6 +77,78 @@
 }
 .user-nav__link--cart {
   background-image: url("../images/icons/cart_icon.svg");
+}
+
+.top-slider {
+  background-color: $bg;
+  padding: 65px 0 45px;
+  background-image: url("../images/dist/abstract\ shape-bg.webp");
+  background-repeat: no-repeat;
+  background-size: contain;
+  &__container {
+    max-width: 1560px;
+  }
+  &__item {
+    display: flex !important;
+    justify-content: space-between;
+  }
+  &__content {
+    padding-top: 125px;
+    padding-left: 175px;
+  }
+  &__title {
+    max-width: 670px;
+    width: 100%;
+    font-size: 58px;
+    line-height: 68px;
+    color: $titleColor;
+    @extend %roboto-700;
+    margin-bottom: 35px;
+  }
+  &__text {
+    margin-bottom: 55px;
+    max-width: 470px;
+  }
+  &__link {
+    @extend %btn;
+    padding: 18px 35px;
+  }
+}
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: -70px;
+  li {
+    padding: 0 5px;
+    line-height: 0;
+    button {
+      font-size: 0;
+      width: 26px;
+      height: 26px;
+      border: 1px solid transparent;
+      border-radius: 50%;
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: $defaultColor;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    &.slick-active {
+      button {
+        border-color: $accentColor;
+        &::before {
+          background-color: $accentColor;
+        }
+      }
+    }
+  }
 }
 
 footer {
@@ -142,22 +215,23 @@ footer {
     display: inline-block;
     margin-bottom: 14px;
   }
+  &__form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   &__form-input {
     background-color: #fff;
     box-shadow: 0px 7px 20px 0px rgba(192, 192, 192, 0.3);
     max-width: 320px;
     width: 100%;
-    padding: 12px 10px 12px 15px;
+    padding: 19px 10px 17px;
     &::placeholder {
       color: $defaultColor;
     }
   }
   &__form-button {
-    text-transform: uppercase;
-    background-color: $accentColor;
-    color: #fff;
-    box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
-    padding: 12px 25px;
+    @extend %btn;
   }
 }
 
