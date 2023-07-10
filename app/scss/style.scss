@@ -151,6 +151,29 @@
   }
 }
 
+.info__item {
+  max-width: 370px;
+  width: 100%;
+}
+
+
+.info__item-icons {
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 60px;
+  height: 60px;
+  display: block;
+}
+.info__item-icons--icon-car {
+  background-image: url("../images/icons/icon-car.svg");
+}
+.info__item-icons--icon-days {
+  background-image: url("../images/icons/icon-days.svg");
+}
+.info__item-icons--icon-support {
+  background-image: url("../images/icons/icon-support.svg");
+}
+
 footer {
   background-color: $bg;
 }
