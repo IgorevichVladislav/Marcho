@@ -27,3 +27,17 @@ a{
     color: $defaultColor;
     @extend %quicksand-500;
 }
+.title {
+    text-align: center;
+    @extend %roboto-700;
+    font-size: 48px;
+    text-transform: uppercase;
+    color: $titleColor;
+    line-height: 65px;
+}
+.text {
+    text-align: center;
+    max-width: 570px;
+    width: 100%;
+    margin: 0 auto 55px;
+}
