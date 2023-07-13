@@ -82,7 +82,7 @@
 .top-slider {
   background-color: $bg;
   padding: 65px 0 45px;
-  background-image: url("../images/dist/abstract\ shape-bg.webp");
+  background-image: url("../images/dist/decor/abstract\ shape-bg.webp");
   background-repeat: no-repeat;
   background-size: contain;
   &__container {
@@ -151,11 +151,31 @@
   }
 }
 
-.info__item {
-  max-width: 370px;
-  width: 100%;
+.categories-info {
+  padding: 120px 0;
+  background-image: url(../images/dist/decor/shape-left.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: -50px;
 }
 
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 110px;
+  &__item {
+    max-width: 370px;
+    width: 100%;
+    padding: 60px 40px;
+    box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
+  }
+  &__item-title {
+    @extend %roboto-400;
+    margin: 40px 0 20px;
+    color: $titleColor;
+    font-size: 22px;
+  }
+}
 
 .info__item-icons {
   background-repeat: no-repeat;
@@ -172,6 +192,58 @@
 }
 .info__item-icons--icon-support {
   background-image: url("../images/icons/icon-support.svg");
+}
+
+.categories {
+  &__items {
+    min-height: 635px;
+    display: grid;
+    grid-template-columns: repeat(3, [col] 1fr);
+    grid-template-rows: repeat(2, [row] 1fr);
+    grid-gap: 30px;
+    transition: color 3.5s linear;
+  }
+  &__item {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    &:nth-child(1) {
+      grid-row: span 2;
+      background-color: #eedeef;
+      .categories__item-subtitle,
+      .categories__link:hover {
+        color: #5800e4;
+      }
+    }
+    &:nth-child(2) {
+      grid-column: span 2;
+      background-color: #deeeef;
+      .categories__item-subtitle,
+      .categories__link:hover {
+        color: $accentColor;
+      }
+    }
+    &:nth-child(3) {
+      background-color: #fef6a9;
+    }
+    &:nth-child(4) {
+      background-color: #ececec;
+    }
+  }
+  &__item-subtitle {
+    margin-bottom: 5px;
+  }
+  &__item-title {
+    font-size: 22px;
+    color: $titleColor;
+    margin-bottom: 16px;
+    @extend %roboto-500
+  }
+  &__link {
+    text-transform: uppercase;
+    color: $titleColor;
+    @extend %roboto-400;
+  }
 }
 
 footer {
