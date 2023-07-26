@@ -46,7 +46,8 @@ function scripts() {
     ["node_modules/jquery/dist/jquery.js",
     "node_modules/swiper/swiper-bundle.js", //подключаем swiper плагин
     "node_modules/slick-carousel/slick/slick.js", //подключаем slick плагин
-    "node_modules/fancybox/dist/js/jquery.fancybox.js", //подключаем slick плагин
+    "node_modules/fancybox/dist/js/jquery.fancybox.js", //подключаем fancybox плагин
+    "node_modules/rateyo/src/jquery.rateyo.js", //подключаем rateyo плагин
     "app/js/main.js"])
     //'app/js/*.js',
     //'!app/js/main.min.js' - использовать все js файлы, кроме main.min.js
