@@ -543,6 +543,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    box-shadow: 0px 10px 40px 0px rgba(187, 187, 187, 0.3);
     span {
       @extend %roboto-700;
       font-size: 48px;
@@ -554,6 +555,74 @@
   &__link {
     @extend %btn-white;
     margin-top: 30px;
+  }
+}
+
+.blog {
+  padding: 50px 0 165px;
+  &__items {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    max-width: 370px;
+    width: 100%;
+    border: 1px solid #ececec;
+  }
+  &__item-img_link {
+    display: inline-block;
+    margin-bottom: 30px;
+    img {
+      height: 288px;
+      object-fit: cover;
+    }
+  }
+  &__item-list {
+    padding: 0 40px;
+  }
+  &__item-author_link {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  &__item-author,
+  &__item-date {
+    position: relative;
+    padding-left: 30px;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      top: 4px;
+      left: 0;
+    }
+  }
+  &__item-author::before {
+    background-image: url(../images/dist/icons/user-grey.svg);
+  }
+  &__item-date::before {
+    background-image: url(../images/dist/icons/clock.svg);
+  }
+  &__item-title {
+    font-size: 22px;
+    @extend %roboto-400;
+    color: $titleColor;
+    margin: 10px 0;
+  }
+  &__item-main_link {
+    margin-bottom: 30px;
+    display: inline-block;
+    position: relative;
+    &::after {
+      content: "";
+      background-image: url(../images/dist/icons/arrow.svg);
+      position: absolute;
+      top: 10px;
+      right: -20px;
+      width: 10px;
+      height: 8px;
+    }
   }
 }
 
