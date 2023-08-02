@@ -568,6 +568,47 @@
     max-width: 370px;
     width: 100%;
     border: 1px solid #ececec;
+    transition: all 0.3s linear;
+    position: relative;
+    &--left-side::before,
+    &--right-side::before,
+    &--right-side::after {
+      content: "";
+      position: absolute;
+    }
+    &--left-side::before {
+      background-image: url(../images/dist/blog-decor/blue-dots.svg);
+      width: 105px;
+      height: 105px;
+      bottom: 0;
+      left: -250px;
+    }
+    &--right-side::before {
+      background-image: url(../images/dist/blog-decor/red-dots.svg);
+      width: 126px;
+      height: 53px;
+      top: -25px;
+      right: -25px;
+      z-index: -1;
+    }
+    &--right-side::after {
+      background-image: url(../images/dist/blog-decor/red-cyrcle.svg);
+      width: 65px;
+      height: 65px;
+      bottom: -70px;
+      right: -200px;
+    }
+    &:hover {
+      background-color: #fff;
+      border-color: transparent;
+      box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
+      .blog__item-main_link {
+        color: $accentColor;
+        &::after {
+          background-image: url(../images/dist/icons/arrow-accent.svg);
+        }
+      }
+    }
   }
   &__item-img_link {
     display: inline-block;
@@ -614,6 +655,7 @@
     margin-bottom: 30px;
     display: inline-block;
     position: relative;
+    transition: all 0.3s linear;
     &::after {
       content: "";
       background-image: url(../images/dist/icons/arrow.svg);
