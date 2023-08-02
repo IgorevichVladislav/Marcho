@@ -79,6 +79,22 @@
   background-image: url("../images/icons/cart_icon.svg");
 }
 
+.top {
+  &__container {
+    max-width: 1700px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding: 120px 0 130px;
+    margin-bottom: 115px;
+    text-align: center;
+  }
+  &__title {
+    @extend %top-title
+  }
+}
+
 .top-slider {
   background-color: $bg;
   padding: 65px 0 45px;
