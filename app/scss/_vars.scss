@@ -45,6 +45,15 @@ $bg: #f6f6f6;
   display: inline-block;
 }
 
+%btn-form {
+  text-transform: uppercase;
+  background-color: #292929;
+  color: #fff;
+  padding: 14px;
+  letter-spacing: 0.2em;
+  @extend %roboto-400;
+}
+
 %top-title {
   text-align: center;
   @extend %roboto-400;
