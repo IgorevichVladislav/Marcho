@@ -91,9 +91,57 @@
     text-align: center;
   }
   &__title {
-    @extend %top-title
+    @extend %top-title;
   }
 }
+
+.modal {
+  max-width: 570px;
+  width: 100%;
+  padding-top: 100px;
+  margin: 0 auto 115px;
+  &__links {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  &__link {
+    @extend %roboto-400;
+    font-size: 22px;
+    color: #909090;
+    margin: 0 30px;
+    text-transform: uppercase;
+  }
+  &__link--active {
+    color: $accentColor;
+  }
+  &__label {
+    margin-bottom: 35px;
+    display: block;
+  }
+  &__input {
+    display: block;
+    width: 100%;
+    background-color: $bg;
+    margin-top: 4px;
+    height: 60px;
+    padding: 0 15px;
+  }
+  &__btn {
+    width: 100%;
+    text-transform: uppercase;
+    background-color: #292929;
+    color: #fff;
+    padding: 14px;
+    margin: 20px 0;
+    @extend %roboto-400;
+  }
+  &__lost-pass {
+    color: $accentColor;
+  }
+}
+
+
+
 
 .top-slider {
   background-color: $bg;
