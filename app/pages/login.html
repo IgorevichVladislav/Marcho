@@ -1,19 +1,47 @@
 <!--=include header.html -->
 <section class="top">
-  <div class="top__container" style="background-image: url(../images/dist/top-bg.webp);">
+  <div
+    class="top__container"
+    style="background-image: url(../images/dist/top-bg.webp)"
+  >
     <div class="container">
       <h2 class="top__title">Log in</h2>
-        <div class="bredcrumbs">
-          <ul class="bredcrumbs__list">
-            <li class="bredcrumbs__item">
-              <a class="bredcrumbs__link" href="#">Home</a>
-            </li>
-            <li class="bredcrumbs__item">
-              <a class="bredcrumbs__link" href="#">Log in</a>
-            </li>
-          </ul>
-        </div>
+      <div class="bredcrumbs">
+        <ul class="bredcrumbs__list">
+          <li class="bredcrumbs__item">
+            <a class="bredcrumbs__link" href="#">Home</a>
+          </li>
+          <li class="bredcrumbs__item">
+            <a class="bredcrumbs__link" href="#">Log in</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
-  <!--=include footer.html -->
+
+<section class="modal">
+  <div class="container">
+    <div class="modal__links">
+      <a class="modal__link" href="#">register</a>
+      <a class="modal__link modal__link--active" href="#">login</a>
+    </div>
+    <form class="modal__form" action="#">
+      <label class="modal__label">
+        Username or email address*
+        <input class="modal__input" type="text" required />
+      </label>
+      <label class="modal__label">
+        Password*
+        <input class="modal__input" type="password" required />
+      </label>
+      <label>
+        <input type="checkbox" />
+        Remember me
+      </label>
+      <button class="modal__btn" type="submit" value="log in">log in</button>
+      <a class="modal__lost-pass" href="#">Lost your password?</a>
+    </form>
+  </div>
+</section>
+<!--=include footer.html -->
