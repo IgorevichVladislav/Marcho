@@ -1,0 +1,84 @@
+<!--=include header.html -->
+<section class="top">
+  <div
+    class="top__container"
+    style="background-image: url(../images/dist/top-bg.webp)"
+  >
+    <div class="container">
+      <h2 class="top__title">Shop page</h2>
+      <div class="bredcrumbs">
+        <ul class="bredcrumbs__list">
+          <li class="bredcrumbs__item">
+            <a class="bredcrumbs__link" href="#">Home</a>
+          </li>
+          <li class="bredcrumbs__item">
+            <a class="bredcrumbs__link" href="#">Shop page</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="shop">
+  <div class="container">
+    <div class="shop__inner">
+      <aside class="shop__filters filter">
+        <div class="filter-search filter__item">
+          <h3 class="filter__title">Search</h3>
+          <form class="filter-search__form" action="#">
+            <input
+              class="filter-search__input"
+              type="text"
+              placeholder="Search your keyword...."
+            />
+            <button class="filter-search__btn" type="submit">
+              <img src="../images/dist/icons/search-white.svg" alt="Search" />
+            </button>
+          </form>
+        </div>
+
+        <div class="filter__item filter-price">
+          <h3 class="filter__title">Prise filter</h3>
+          <form class="filter-price__form" action="#">
+            <input
+              class="filter-price__input"
+              data-type="double"
+              data-min="0"
+              data-max="1000"
+              data-from="200"
+              data-to="500"
+              data-grid="true"
+            />
+            <label class="filter-price__label">
+              <span class="filter-price__span">Price:</span>
+              <button class="filter-price__btn" type="submit">Filter</button>
+            </label>
+          </form>
+        </div>
+
+<div class="filter__item filter-color">
+  <h3 class="filter__title">Color filter</h3>
+  <form class="filter-color__form">
+    <label class="filter-color__label">
+      <span class="filter-color__text">Blue (15)</span>
+      <div class="filter-color__box">
+        <input class="filter-color__input" type="checkbox">
+        <span class="filter-color__checkbox
+        filter-color__checkbox--blue"></span>
+      </div>
+    </label>
+
+  </form>
+</div>
+
+
+
+      </aside>
+
+      <div class="shop__content"></div>
+    </div>
+  </div>
+</section>
+
+<!--=include footer.html -->

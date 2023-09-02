@@ -1,4 +1,9 @@
 $(function () {
+
+  $(".filter-price__input").ionRangeSlider(
+  );
+
+
   $(".top-slider__inner").slick({
     dots: true,
     arrows: false,
@@ -58,5 +63,5 @@ function initializeClock(id, endtime) {
 const deadline = $(".promo__clock").attr("data-time");
 initializeClock('promo__clock', deadline);
 
-});
 
+});

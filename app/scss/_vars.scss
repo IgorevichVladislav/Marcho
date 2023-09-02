@@ -62,3 +62,10 @@ $bg: #f6f6f6;
   color: #15181d;
   line-height: 65px;
 }
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
