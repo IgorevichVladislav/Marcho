@@ -286,8 +286,9 @@
       <div class="shop-content">
         <div class="shop-content__filter">
           <div class="shop-content__filter-buttons">
-            View
-            <button class="shop-content__filter-btn">
+            <span>View</span>
+            <button class="shop-content__filter-btn
+            shop-content__filter-btn--active">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -296,7 +297,7 @@
               >
                 <path
                   fill-rule="evenodd"
-                  fill="rgb(254, 62, 87)"
+                  fill="rgb(141, 141, 141)"
                   d="M-0.000,3.750 L3.750,3.750 L3.750,-0.000 L-0.000,-0.000 L-0.000,3.750 ZM5.625,14.1000 L9.375,14.1000 L9.375,11.250 L5.625,11.250 L5.625,14.1000 ZM-0.000,14.1000 L3.750,14.1000 L3.750,11.250 L-0.000,11.250 L-0.000,14.1000 ZM-0.000,9.375 L3.750,9.375 L3.750,5.625 L-0.000,5.625 L-0.000,9.375 ZM5.625,9.375 L9.375,9.375 L9.375,5.625 L5.625,5.625 L5.625,9.375 ZM11.250,-0.000 L11.250,3.750 L14.1000,3.750 L14.1000,-0.000 L11.250,-0.000 ZM5.625,3.750 L9.375,3.750 L9.375,-0.000 L5.625,-0.000 L5.625,3.750 ZM11.250,9.375 L14.1000,9.375 L14.1000,5.625 L11.250,5.625 L11.250,9.375 ZM11.250,14.1000 L14.1000,14.1000 L14.1000,11.250 L11.250,11.250 L11.250,14.1000 Z"
                 />
               </svg>
@@ -318,18 +319,20 @@
           </div>
 
           <div class="shop-content__filter-selects">
-            <select class="shop-content__filter-sort">
+            <form class="shop-content__filter-form" action="#">
+            <select class="shop-content__filter-sort select-style">
               <option value="">Sort By Default</option>
               <option value="">2</option>
               <option value="">3</option>
               <option value="">4</option>
             </select>
-            <select class="shop-content__filter-show">
+            <select class="shop-content__filter-show select-style">
               <option value="">Show 9</option>
               <option value="">2</option>
               <option value="">3</option>
               <option value="">4</option>
             </select>
+          </form>
           </div>
         </div>
 
@@ -699,3 +702,6 @@
   </div>
 
 </footer>
+<script src="js/main.min.js"></script>
+</body>
+</html>

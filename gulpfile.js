@@ -49,6 +49,7 @@ function scripts() {
     "node_modules/ion-rangeslider/js/ion.rangeSlider.js", //подключаем rangeSlider плагин
     "node_modules/fancybox/dist/js/jquery.fancybox.js", //подключаем fancybox плагин
     "node_modules/rateyo/src/jquery.rateyo.js", //подключаем rateyo плагин
+    "node_modules/jquery-form-styler/dist/jquery.formstyler.js", //подключаем formstyler плагин
     "app/js/main.js"])
     //'app/js/*.js',
     //'!app/js/main.min.js' - использовать все js файлы, кроме main.min.js
