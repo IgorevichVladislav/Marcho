@@ -508,6 +508,82 @@
 
 .product-item {
   max-width: 370px;
+  text-align: center;
+  &.product-item--list {
+    min-width: 100%;
+    display: flex;
+    text-align-last: left;
+    &:hover {
+      .product-item__link-box {
+        transform: translateY(-280%);
+      }
+    }
+    .product-item__img-box {
+      height: 250px;
+      min-width: 200px;
+      margin-bottom: 0;
+      img {
+        height: 250px;
+      }
+    }
+    .product-item__text {
+      margin-bottom: 25px;
+    }
+    .product-item__btn {
+      @extend %btn-black;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        background-color: $accentColor;
+        box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
+      }
+    }
+    .product-item__link-box {
+      background-color: transparent;
+      width: 115px;
+      box-shadow: none;
+      bottom: auto;
+      .product-item__link {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .product-item__link--line {
+        display: none;
+      }
+    }
+    .product-item__content-box {
+      display: block;
+    }
+    .product-item__box {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .product-item__title {
+      order: -1;
+      width: 100%;
+      padding: 0;
+      margin-bottom: 10px;
+    }
+    .product-item__price {
+      order: -1;
+      margin-left: -12px;
+    }
+    .star {
+      margin-left: 23px;
+    }
+    .product-item__wrapper-box {
+      padding: 30px 40px;
+      border: 1px solid #ececec;
+      border-left: none;
+    }
+  }
+  &__content-box {
+    display: none;
+  }
   &__img-box {
     position: relative;
     height: 370px;
@@ -1036,6 +1112,14 @@ footer {
 
 .shop-content {
   width: 100%;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .product-item {
+      margin-bottom: 40px;
+    }
+  }
   &__filter {
     border: 1px solid #ebebeb;
     padding: 20px 25px 20px 30px;
@@ -1084,7 +1168,7 @@ footer {
   width: 10px;
   height: 5px;
   border: transparent;
-  background-image: url(../images/dist/icons/angle-down.svg)
+  background-image: url(../images/dist/icons/angle-down.svg);
 }
 .jq-selectbox.focused .jq-selectbox__select {
   border: transparent;
