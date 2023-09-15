@@ -83,3 +83,45 @@ a {
 .header--404-page {
   background-color: $bg;
 }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+  &__list {
+    display: flex;
+    padding: 0 35px;
+  }
+  &__item {
+    padding: 0 15px;
+  }
+  &__link--active {
+    color: $accentColor;
+  }
+  &__arrows {
+    text-transform: uppercase;
+    position: relative;
+    &::before {
+      content: "";
+      background-repeat: no-repeat;
+      position: absolute;
+      width: 5px;
+      height: 10px;
+      top: 8px;
+    }
+  }
+  &__prev {
+    padding-left: 15px;
+    &::before {
+      background-image: url(../images/dist/icons/angle_left_pg.svg);
+      left: 0;
+    }
+  }
+  &__next {
+    padding-right: 15px;
+    &::before {
+      background-image: url(../images/dist/icons/angle_right_pg.svg);
+      right: 0;
+    }
+  }
+}
