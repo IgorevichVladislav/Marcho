@@ -13,7 +13,10 @@ $('.button-grid').on('click', function () {
   $('.product-item').removeClass('product-item--list')
 });
 
-  $(".filter-price__input").ionRangeSlider();
+  $(".filter-price__input").ionRangeSlider({
+    type: "double",
+    prefix: "$"
+  });
 
   $('.select-style').styler();
 
