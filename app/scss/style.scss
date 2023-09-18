@@ -1489,4 +1489,44 @@ footer {
   }
 }
 
+.product-tabs {
+  padding-top: 110px;
+  &__top-list {
+    margin-bottom: 40px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  &__top-item {
+    display: inline-block;
+    margin-bottom: 10px;
+    & + .product-tabs__top-item {
+      margin-left: 55px;
+    }
+  }
+  &__top-link {
+    @extend %roboto-400;
+    font-size: 22px;
+  }
+  &__top-link--active {
+    color: $titleColor;
+    border-color: $accentColor;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -12px;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $accentColor;
+    }
+  }
+  &__content-item {
+    display: none;
+    &.product-tabs__content-item--active {
+      display: block;
+    }
+  }
+}
+
 @import "_media";

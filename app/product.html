@@ -377,8 +377,26 @@
         </div>
       </div>
     </div>
-    <div class="product-tabs"></div>
-    <div class="product-reviews"></div>
+    <div class="product-tabs">
+      <ul class="product-tabs__top-list">
+        <li class="product-tabs__top-item">
+          <a class="product-tabs__top-link product-tabs__top-link--active" href="#tab-1">Description</a>
+        </li>
+        <li class="product-tabs__top-item">
+          <a class="product-tabs__top-link" href="#tab-2">Additional information</a>
+        </li>
+        <li class="product-tabs__top-item">
+          <a class="product-tabs__top-link" href="#tab-3">Reviews</a>
+        </li>
+      </ul>
+
+      <ul class="product-tabs__content-list">
+        <li class="product-tabs__content-item product-tabs__content-item--active" 
+        id="tab-1">content 1</li>
+        <li class="product-tabs__content-item" id="tab-2">content 2</li>
+        <li class="product-tabs__content-item" id="tab-3">content 3</li>
+      </ul>
+    </div>
   </div>
 </section>
 <footer class="footer">
