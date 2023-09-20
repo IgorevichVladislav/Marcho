@@ -1216,10 +1216,6 @@ footer {
     border-color: #5794bf;
   }
 }
-.product-page {
-  padding-bottom: 60px;
-  border-bottom: 1px solid #f0f0ff;
-}
 
 .product-one {
   &__inner {
@@ -1564,7 +1560,7 @@ footer {
     padding-left: 25px;
     position: relative;
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       top: 8px;
@@ -1576,4 +1572,123 @@ footer {
   }
 }
 
+.comments-form {
+  border-bottom: 1px solid #f0f0ff;
+  padding-bottom: 60px;
+  &__title {
+    color: $titleColor;
+    font-size: 22px;
+    @extend %roboto-400;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 2px;
+      left: 0;
+      bottom: 0;
+      background-color: #fe3e57;
+    }
+  }
+  &__rating {
+    margin-bottom: 30px;
+  }
+  &__rating-title {
+    color: $titleColor;
+    @extend %quicksand-400;
+    margin-right: 60px;
+  }
+  &__label + .comments-form__label {
+    margin-left: 25px;
+  }
+  &__input {
+    @extend %radio-hidden;
+    &:checked + .comments-form__radio {
+      path {
+        fill: #ffc35b;
+        }
+      }
+    }
+  &__radio {
+    cursor: pointer;
+    path {
+      fill: $defaultColor;
+      }
+  }
+  &__wrapper-input {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__text-input {
+    max-width: 570px;
+    width: 100%;
+    border: 1px solid #f0f0f0;
+    padding: 14px 20px;
+    transition: all 0.2s ease-in;
+    &::placeholder {
+      color: $defaultColor;
+    }
+    &:hover::placeholder {
+      color: $titleColor;
+    }
+    &:hover {
+      border-color: $titleColor;
+    }
+    &:active {
+      border-color: $titleColor;
+    }
+    &:focus {
+      border-color: $defaultColor;
+    }
+  }
+  &__textarea {
+    border: 1px solid #f0f0f0;
+    padding: 16px 20px;
+    margin-bottom: 40px;
+    width: 100%;
+    min-height: 225px;
+    max-height: 325px;
+    resize: vertical;
+    transition: all 0.2s ease-in;
+    &::placeholder {
+      color: $defaultColor;
+    }
+    &:hover::placeholder {
+      color: $titleColor;
+    }
+    &:hover {
+      border-color: $titleColor;
+    }
+    &:active {
+      border-color: $titleColor;
+    }
+    &:focus {
+      border-color: $defaultColor;
+    }
+  }
+  &__btn {
+    @extend %btn-red;
+    letter-spacing: 0;
+    padding: 15px 36px;
+  }
+}
+
+.related {
+  padding: 50px 0 105px;
+  &__title {
+    margin-bottom: 50px;
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 30px;
+    .product-item__img-box {
+      height: auto;
+      margin-bottom: 20px;
+    }
+  }
+}
 @import "_media";
