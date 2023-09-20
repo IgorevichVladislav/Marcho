@@ -67,16 +67,16 @@
 }
 
 .user-nav__link--user {
-  background-image: url("../images/icons/user.svg");
+  background-image: url("../images/dist/icons/user.svg");
 }
 .user-nav__link--search {
-  background-image: url("../images/icons/search.svg");
+  background-image: url("../images/dist/icons/search.svg");
 }
 .user-nav__link--like {
-  background-image: url("../images/icons/like_icon.svg");
+  background-image: url("../images/dist/icons/like_icon.svg");
 }
 .user-nav__link--cart {
-  background-image: url("../images/icons/cart_icon.svg");
+  background-image: url("../images/dist/icons/cart_icon.svg");
 }
 
 .top {
@@ -172,7 +172,7 @@
 .top-slider {
   background-color: $bg;
   padding: 65px 0 45px;
-  background-image: url("../images/dist/decor/abstract\ shape-bg.webp");
+  background-image: url("../images/dist/decor/abstract-shape-bg.webp");
   background-repeat: no-repeat;
   background-size: contain;
   &__container {
@@ -320,13 +320,13 @@
   height: 60px;
   display: block;
   &--icon-car {
-    background-image: url("../images/icons/icon-car.svg");
+    background-image: url("../images/dist/icons/icon-car.svg");
   }
   &--icon-days {
-    background-image: url("../images/icons/icon-days.svg");
+    background-image: url("../images/dist/icons/icon-days.svg");
   }
   &--icon-support {
-    background-image: url("../images/icons/icon-support.svg");
+    background-image: url("../images/dist/icons/icon-support.svg");
   }
 }
 
