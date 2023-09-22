@@ -23,7 +23,7 @@
     color: $titleColor;
     padding-bottom: 1px;
     @extend %roboto-400;
-    transition: border-bottom 0.9s;
+    transition: all 0.1s ease-in;
     &:hover {
       color: $accentColor;
       border-bottom: 1px solid $accentColor;
@@ -67,16 +67,16 @@
 }
 
 .user-nav__link--user {
-  background-image: url("../images/icons/user.svg");
+  background-image: url("../images/dist/icons/user.svg");
 }
 .user-nav__link--search {
-  background-image: url("../images/icons/search.svg");
+  background-image: url("../images/dist/icons/search.svg");
 }
 .user-nav__link--like {
-  background-image: url("../images/icons/like_icon.svg");
+  background-image: url("../images/dist/icons/like_icon.svg");
 }
 .user-nav__link--cart {
-  background-image: url("../images/icons/cart_icon.svg");
+  background-image: url("../images/dist/icons/cart_icon.svg");
 }
 
 .top {
@@ -172,7 +172,7 @@
 .top-slider {
   background-color: $bg;
   padding: 65px 0 45px;
-  background-image: url("../images/dist/decor/abstract\ shape-bg.webp");
+  background-image: url("../images/dist/decor/abstract-shape-bg.webp");
   background-repeat: no-repeat;
   background-size: contain;
   &__container {
@@ -320,13 +320,13 @@
   height: 60px;
   display: block;
   &--icon-car {
-    background-image: url("../images/icons/icon-car.svg");
+    background-image: url("../images/dist/icons/icon-car.svg");
   }
   &--icon-days {
-    background-image: url("../images/icons/icon-days.svg");
+    background-image: url("../images/dist/icons/icon-days.svg");
   }
   &--icon-support {
-    background-image: url("../images/icons/icon-support.svg");
+    background-image: url("../images/dist/icons/icon-support.svg");
   }
 }
 
@@ -624,7 +624,7 @@
   &__link {
     display: inherit;
     path {
-      transition: 0.3s all;
+      transition: 0.2s all;
     }
   }
   &__link:hover {
@@ -878,9 +878,9 @@ footer {
     padding-left: 18px;
   }
   &__social-link {
-    transition: 0.3s;
     path {
       fill: $defaultColor;
+      transition: 0.2s all ease-in;
     }
     &:hover {
       path {
@@ -1445,6 +1445,7 @@ footer {
   &__social-link {
     path {
       fill: $defaultColor;
+      transition: all 0.2s ease-in;
     }
     &:hover {
       path {
@@ -1608,14 +1609,14 @@ footer {
     &:checked + .comments-form__radio {
       path {
         fill: #ffc35b;
-        }
       }
     }
+  }
   &__radio {
     cursor: pointer;
     path {
       fill: $defaultColor;
-      }
+    }
   }
   &__wrapper-input {
     margin-bottom: 30px;
@@ -1691,4 +1692,192 @@ footer {
     }
   }
 }
+
+.blog-page {
+  padding-bottom: 120px 0 60px;
+  &__item--slider {
+    .blog-page__item-wrapper {
+      margin-top: -8px;
+    }
+  }
+  &__slider {
+    .slick-next,
+    .slick-prev {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 5;
+      width: 40px;
+      height: 40px;
+      background-color: #fff;
+      border-radius: 50%;
+      box-shadow: 0px 7px 20px 0px #a8a8a84d;
+      path {
+        fill: $accentColor;
+        transition: 0.2s all ease-in-out;
+      }
+      &:hover {
+        background-color: $accentColor;
+        box-shadow: 0px 7px 20px 0px #fe3e574d;
+        path {
+          fill: #fff;
+        }
+      }
+    }
+    .slick-prev {
+      left: 40px;
+    }
+    .slick-next {
+      right: 40px;
+    }
+    .slick-disabled {
+      opacity: 0.3;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__content {
+    max-width: 770px;
+    width: 100%;
+    margin-right: 30px;
+  }
+  &__item {
+    border: 1px solid #ececec;
+    border-top: none;
+    margin-bottom: 60px;
+    &.blog-page__item--no-image {
+      border-top: 1px solid #ececec;
+      box-shadow: 0px 20px 60px 0px rgba(202, 202, 202, 0.35);
+    }
+  }
+  &__img {
+    max-width: 770px;
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+  }
+  &__item-wrapper {
+    padding: 40px;
+  }
+  &__item-title {
+    @extend %roboto-500;
+    font-size: 22px;
+    line-height: 32px;
+    color: $titleColor;
+    margin-bottom: 20px;
+    transition: all 0.2s ease-in;
+    &:hover {
+      color: $accentColor;
+    }
+  }
+  &__item-author_link {
+    justify-content: start;
+  }
+  &__item-author {
+    margin-right: 30px;
+  }
+  &__aside {
+    max-width: 370px;
+    width: 100%;
+  }
+}
+
+.person {
+  &__info {
+    text-align: center;
+  }
+  padding: 40px 30px 35px;
+  &__img {
+    display: inline-block;
+    height: 160px;
+    width: 160px;
+    object-fit: contain;
+    padding-bottom: 35px;
+  }
+  &__position {
+    color: $accentColor;
+    display: inline-block;
+    margin-bottom: 25px;
+  }
+  &__text {
+    margin-bottom: 25px;
+  }
+  &__name {
+    @extend %roboto-700;
+    font-size: 18px;
+    color: $titleColor;
+  }
+  &__social-list {
+    display: flex;
+    justify-content: center;
+  }
+  &__social-item:not(:first-child) {
+    margin-left: 15px;
+  }
+  &__social-link {
+    path {
+      fill: $defaultColor;
+      transition: 0.2s all ease-in;
+    }
+    &:hover {
+      path {
+        fill: $accentColor;
+      }
+    }
+  }
+}
+
+.latest-post {
+  padding: 35px 30px;
+  &__title {
+    @extend %roboto-400;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: $titleColor;
+    margin-bottom: 35px;
+  }
+  &__item {
+    display: flex;
+    margin-bottom: 20px;
+    & + .latest-post__item {
+      border-top: 1px solid #ececec;
+      padding-top: 20px;
+    }
+  }
+  &__img-link {
+    min-width: 80px;
+    margin-right: 20px;
+    display: block;
+  }
+  &__img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+  }
+  &__title-link {
+    font-size: 18px;
+    @extend %roboto-400;
+    color: $titleColor;
+    line-height: 28px;
+  }
+  &__date {
+    line-height: 28px;
+    padding-left: 26px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      left: 0;
+      top: 6px;
+      background-image: url(../images/dist/icons/calendar.svg);
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
 @import "_media";
