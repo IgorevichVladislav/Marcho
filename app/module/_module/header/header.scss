@@ -1,0 +1,75 @@
+.header {
+    padding: 40px 0;
+  }
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__item {
+      text-transform: uppercase;
+    }
+    &__item + .menu__item {
+      padding-left: 35px;
+    }
+    &__list {
+      display: flex;
+    }
+    &__link {
+      color: $titleColor;
+      padding-bottom: 1px;
+      @extend %roboto-400;
+      transition: all 0.1s ease-in;
+      &:hover {
+        color: $accentColor;
+        border-bottom: 1px solid $accentColor;
+        @extend %roboto-700;
+      }
+    }
+    &__link--active {
+      color: $accentColor;
+      border-bottom: 1px solid $accentColor;
+      @extend %quicksand-500;
+    }
+  }
+  .user-nav__list {
+    display: flex;
+  }
+  .user-nav__item + .user-nav__item {
+    padding-left: 35px;
+  }
+  
+  .user-nav__link {
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: relative;
+  }
+  .user-nav__num {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $accentColor;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    line-height: 20px;
+    position: absolute;
+    top: -9px;
+    right: -14px;
+  }
+  
+  .user-nav__link--user {
+    background-image: url("../images/dist/icons/user.svg");
+  }
+  .user-nav__link--search {
+    background-image: url("../images/dist/icons/search.svg");
+  }
+  .user-nav__link--like {
+    background-image: url("../images/dist/icons/like_icon.svg");
+  }
+  .user-nav__link--cart {
+    background-image: url("../images/dist/icons/cart_icon.svg");
+  }

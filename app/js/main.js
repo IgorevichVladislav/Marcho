@@ -121,4 +121,7 @@ $(".blog-page__slider").slick({
   initializeClock("promo__clock", deadline);
 });
 
-
+document.querySelector(".menu__burger").addEventListener("click", function () {
+  this.classList.toggle("menu__burger--active");
+  document.querySelector(".menu__list").classList.toggle('menu__list--active');
+});

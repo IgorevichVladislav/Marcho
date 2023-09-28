@@ -10,6 +10,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  &__burger {
+    display: none;
+  }
   &__item {
     text-transform: uppercase;
   }

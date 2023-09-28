@@ -1,0 +1,106 @@
+@media (max-width: 1200px) {
+  .header {
+    .menu {
+      padding-right: 10px;
+    }
+  }
+}
+@media (max-width: 860px) {
+  .menu {
+    &__list {
+      position: absolute;
+      transform: translateY(-200%);
+      top: 140px;
+      width: 100%;
+      left: 0;
+      flex-direction: column;
+      align-items: center;
+      z-index: 10;
+      transition: 0.3s transform ease-in;
+      &.menu__list--active {
+        transform: translateY(0%);
+      }
+    }
+    &__item {
+      width: 100%;
+      padding: 0 15px;
+      text-align: center;
+    }
+    &__item + .menu__item {
+      padding-left: 15px;
+    }
+    &__link {
+      display: block;
+      padding: 12px 0;
+    }
+    &__burger {
+      width: 44px;
+      height: 44px;
+      background-color: $bg;
+      border: 1px solid $accentColor;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      order: 1;
+      margin-left: 40px;
+      transition: transform 0.2s ease-in-out, width 0.2s ease-in;
+      &.menu__burger--active .menu__burger-line {
+        width: 0;
+      }
+      &.menu__burger--active .menu__burger-line::after {
+        transform: rotate(-45deg);
+        left: 2px;
+        bottom: 20px;
+      }
+      &.menu__burger--active .menu__burger-line::before {
+        transform: rotate(45deg);
+        left: 2px;
+        top: 20px;
+      }
+      &.menu__burger--active {
+        background-color: $accentColor;
+        border-radius: 5px;
+      }
+    }
+    &__burger-line {
+      width: 90%;
+      height: 2px;
+      background-color: $titleColor;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        width: 90%;
+        height: 2px;
+        background-color: $titleColor;
+        transition: all 0.2s ease-in-out;
+      }
+      &::before {
+        top: 5px;
+        left: 2px;
+      }
+      &::after {
+        bottom: 5px;
+        left: 2px;
+      }
+    }
+  }
+  .user-nav__list {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .menu {
+    flex-wrap: wrap;
+  }
+  .user-nav__list {
+    width: 100%;
+    order: 1;
+    margin-top: 35px;
+    justify-content: flex-end;
+    padding-right: 15px;
+  }
+}
