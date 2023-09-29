@@ -4,6 +4,16 @@
       padding-right: 10px;
     }
   }
+  .footer-top {
+    flex-wrap: wrap;
+    &__text {
+      width: 100%;
+    }
+    &__wrapper-form {
+      width: 100%;
+      margin-top: 30px;
+    }
+  }
 }
 @media (max-width: 860px) {
   .menu {
@@ -19,12 +29,16 @@
       transition: 0.3s transform ease-in;
       &.menu__list--active {
         transform: translateY(0%);
+        background-color: $accentColor;
       }
     }
     &__item {
       width: 100%;
       padding: 0 15px;
       text-align: center;
+      .menu__link.menu__link--active {
+        color: $titleColor;
+      }
     }
     &__item + .menu__item {
       padding-left: 15px;
@@ -32,6 +46,13 @@
     &__link {
       display: block;
       padding: 12px 0;
+      color: #fff;
+      border-bottom: 1px solid transparent;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        color: $titleColor;
+        border-color: $titleColor;
+      }
     }
     &__burger {
       width: 44px;
@@ -67,6 +88,7 @@
     &__burger-line {
       width: 90%;
       height: 2px;
+      text-align: center;
       background-color: $titleColor;
       &::before,
       &::after {
@@ -90,11 +112,32 @@
   .user-nav__list {
     margin-left: auto;
   }
+  .footer-top {
+    &__contact {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+  }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 620px) {
+  .footer-botom {
+    justify-content: center;
+    &__copy {
+      text-align: center;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .logo {
+    order: -1;
+  }
   .menu {
     flex-wrap: wrap;
+    justify-content: flex-end;
   }
   .user-nav__list {
     width: 100%;
@@ -102,5 +145,36 @@
     margin-top: 35px;
     justify-content: flex-end;
     padding-right: 15px;
+  }
+  .footer-top {
+    &__wrapper {
+      margin-top: 30px;
+      width: 100%;
+    }
+    &__title {
+      margin-bottom: 15px;
+    }
+    &__form {
+      flex-wrap: wrap;
+    }
+    &__form-input {
+      max-width: 100%;
+      margin-right: 0;
+    }
+    &__form-button {
+      width: 100%;
+      margin-top: 25px;
+    }
+  }
+  .footer-botom {
+    &__accept-list {
+      margin-top: 10px;
+      justify-content: center;
+    }
+    &__accept-text {
+      width: 100%;
+      text-align: center;
+      padding-bottom: 5px;
+    }
   }
 }

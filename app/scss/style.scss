@@ -27,10 +27,12 @@
     color: $titleColor;
     padding-bottom: 1px;
     @extend %roboto-400;
-    transition: all 0.1s ease-in;
+    transition: all 0.2s ease-in-out;
+    border-bottom: 1px solid transparent;
+    margin: 0 1px;
     &:hover {
       color: $accentColor;
-      border-bottom: 1px solid $accentColor;
+      border-color: $accentColor;
       @extend %roboto-700;
     }
   }
@@ -912,9 +914,23 @@ footer {
     padding: 19px 10px 17px;
     margin-right: 10px;
     background-color: #fff;
+    border: 1px solid transparent;
     box-shadow: 0px 7px 20px 0px rgba(192, 192, 192, 0.3);
+    transition: all 0.2s ease-in;
     &::placeholder {
       color: $defaultColor;
+    }
+    &:hover::placeholder {
+      color: $titleColor;
+    }
+    &:hover {
+      border-color: $titleColor;
+    }
+    &:active {
+      border-color: $titleColor;
+    }
+    &:focus {
+      border-color: $defaultColor;
     }
   }
   &__form-button {
@@ -924,14 +940,16 @@ footer {
 }
 
 .footer-botom {
-  height: 75px;
+  min-height: 75px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   font-size: 16px;
   &__accept-list {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
   }
   &__accept-item {
     margin-left: 25px;
