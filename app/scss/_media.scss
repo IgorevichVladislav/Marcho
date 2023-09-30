@@ -14,8 +14,104 @@
       margin-top: 30px;
     }
   }
+  .top-slider {
+    &__content {
+      padding-left: 20px;
+      padding-top: 40px;
+    }
+    &__img {
+      width: 45%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+  .info {
+    padding: 0 10px;
+    &::after {
+      right: -10px;
+    }
+    &__item {
+      width: 310px;
+      padding: 30px 20px;
+    }
+  }
+  .categories {
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+    }
+    &__item {
+      background-size: cover;
+      background-position: center top;
+      &:nth-child(1) {
+        grid-column: 1;
+        grid-row: span 2;
+        grid-row: 1/3;
+      }
+      &:nth-child(2) {
+        grid-column: span 1;
+        grid-row: span 2;
+        background-position: center right;
+      }
+      &:nth-child(3) {
+        grid-row: span 2;
+      }
+      &:nth-child(4) {
+        grid-row: span 2;
+      }
+    }
+  }
+
+  .categories-info {
+    &::before {
+    }
+    &::after {
+      right: 0;
+    }
+  }
+
+  .blog {
+    &__item {
+      &--right-side::after {
+        right: -15px;
+      }
+      &--right-side::before {
+        right: -10px;
+      }
+    }
+  }
+  .video-fashion {
+    &__inner {
+      display: block;
+    }
+    &__pupap {
+      max-width: 100%;
+    }
+    &__contant {
+      max-width: 100%;
+    }
+  }
+  .product-item {
+    &__img-box {
+      height: 305px;
+    }
+  }
 }
-@media (max-width: 860px) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 992px) {
   .menu {
     &__list {
       position: absolute;
@@ -119,9 +215,55 @@
       margin-bottom: 30px;
     }
   }
+  .top-slider {
+    &__content {
+      padding-top: 20px;
+    }
+    &__title {
+      font-size: 40px;
+      margin-bottom: 25px;
+      line-height: 58px;
+    }
+    &__text {
+      margin-bottom: 30px;
+    }
+    &__link {
+      display: inline-block;
+    }
+  }
+  .info {
+    display: block;
+    &__item {
+      width: 98%;
+      margin: 0 -7px 20px 7px;
+    }
+    &__item-title {
+      margin: 20px 0 10px;
+    }
+  }
+  .categories {
+    &__item {
+      &:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 40px;
+      }
+    }
+  }
+  .product {
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 30px;
+    }
+  }
 }
 
-@media (max-width: 620px) {
+
+
+
+
+@media (max-width: 768px) {
   .footer-botom {
     justify-content: center;
     &__copy {
@@ -129,7 +271,62 @@
       width: 100%;
     }
   }
+  .top-slider {
+    &__content {
+      padding-top: 20px;
+    }
+    &__title {
+      font-size: 38px;
+      margin-bottom: 15px;
+      line-height: 48px;
+    }
+    &__text {
+      margin-bottom: 20px;
+    }
+    &__link {
+      padding: 12px 25px;
+    }
+  }
+  .categories {
+    &__items {
+      display: block;
+    }
+    &__item {
+      height: 300px;
+      margin-top: 25px;
+    }
+  }
+  .video-fashion {
+    padding: 60px 0;
+    &__pupap {
+      height: 270px;
+    }
+    &__subtitle {
+      padding-top: 40px;
+      font-size: 18px;
+    }
+  }
+  .product {
+    padding: 60px 0;
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 25px;
+    }
+  }
+  .product-item {
+    max-width: 100%;
+    &__images {
+      width: 100%;
+    }
+  }
 }
+
+
+
+
+
+
+
 
 @media (max-width: 576px) {
   .logo {
@@ -177,4 +374,56 @@
       padding-bottom: 5px;
     }
   }
+  .top-slider {
+    &__content {
+      padding-top: 0;
+    }
+    &__item {
+      .top-slider__img {
+        display: none;
+      }
+    }
+    &__title {
+      font-size: 30px;
+    }
+    &__link {
+      padding: 10px 22px;
+    }
+  }
+  .slick-dots {
+    margin-top: 0;
+  }
+  .info {
+    display: block;
+    &__item-title {
+      font-size: 20px;
+    }
+  }
+  .categories {
+    &__items {
+    }
+    &__item {
+      background-image: none !important;
+      padding-left: 15px;
+      padding-top: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 150px;
+      margin-top: 25px;
+      &:nth-child(1) {
+        background-color: #eedeef;
+      }
+      &:nth-child(2) {
+background-color: #deeeef;
+      }
+      &:nth-child(3) {
+background-color: #fef6a9;
+      }
+      &:nth-child(4) {
+background-color: #ececec;
+      }
+    }
+  }
+
 }

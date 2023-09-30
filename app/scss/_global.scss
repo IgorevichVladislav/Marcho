@@ -125,3 +125,24 @@ a {
     }
   }
 }
+
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 992px) {
+  
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 40px;
+    line-height: 48px;
+  }
+}
+
+@media (max-width: 576px) {
+  .title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}

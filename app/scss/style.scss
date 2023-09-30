@@ -131,11 +131,34 @@
     margin-top: 4px;
     height: 60px;
     padding: 0 15px;
+    border: 1px solid transparent;
+    transition: all 0.2s ease-in;
+    &::placeholder {
+      color: $defaultColor;
+    }
+    &:hover::placeholder {
+      color: $titleColor;
+    }
+    &:hover {
+      border-color: $titleColor;
+    }
+    &:active {
+      border-color: $titleColor;
+    }
+    &:focus {
+      border-color: $defaultColor;
+    }
   }
   &__btn {
     @extend %btn-form;
     width: 100%;
     margin: 20px 0;
+    transition: all 0.2s ease-in;
+    &:hover {
+      background-color: $accentColor;
+      color: $titleColor;
+      @extend %roboto-400;
+    }
   }
   &__lost-pass {
     color: $accentColor;
@@ -208,6 +231,11 @@
   &__link {
     @extend %btn-red;
     padding: 18px 35px;
+    transition: all 0.2s ease-in;
+    &:hover {
+      background-color: #fff;
+      color: $accentColor;
+    }
   }
 }
 .slick-dots {
@@ -250,11 +278,11 @@
 .categories-info {
   padding: 120px 0;
   position: relative;
-
   &::before,
   &::after {
     content: "";
     position: absolute;
+    z-index: -1;
   }
 
   &::before {
@@ -279,7 +307,7 @@
   justify-content: space-between;
   margin-bottom: 110px;
   position: relative;
-
+  z-index: 5;
   &::before,
   &::after {
     content: "";
@@ -304,8 +332,7 @@
   }
 
   &__item {
-    max-width: 370px;
-    width: 100%;
+    width: 370px;
     padding: 60px 40px;
     background-color: #fff;
     box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
@@ -424,14 +451,35 @@
     height: 480px;
     position: relative;
   }
-  &__play {
-    background-image: url(../images/dist/icons/play-btn.svg);
-    width: 130px;
-    height: 130px;
+  &__play-wrapper {
+    background-image: url(../images/dist/icons/video-red-circle.svg);
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+  &__play {
+    width: 130px;
+    height: 130px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url(../images/dist/icons/video-play-btn.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 19px;
+      width: 16px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: 0.4s all ease-in-out;
+    }
+    &:hover::before {
+      transform: scale(2);
+top: 44%;
+left: 45%;
+    }
   }
   &__content {
     max-width: 570px;
@@ -456,6 +504,11 @@
     @extend %btn-red;
     padding: 14px 27px;
     letter-spacing: 0.2em;
+    transition: all 0.2s ease-in;
+    &:hover {
+      background-color: #fff;
+      color: $accentColor;
+    }
   }
 }
 
@@ -470,6 +523,10 @@
   &__link {
     @extend %btn-white;
     margin-top: 55px;
+    transition: all 0.2s ease-in;
+    &:hover {
+      background-color: $accentColor;
+    }
   }
 }
 .partners {
@@ -727,6 +784,10 @@
   &__link {
     @extend %btn-white;
     margin-top: 30px;
+    transition: all 0.2s ease-in;
+    &:hover {
+      background-color: $accentColor;
+    }
   }
 }
 
@@ -936,6 +997,11 @@ footer {
   &__form-button {
     @extend %btn-red;
     letter-spacing: 0;
+    transition: all 0.2s ease-in;
+    &:hover {
+      background-color: #fff;
+      color: $accentColor;
+    }
   }
 }
 
@@ -1300,6 +1366,11 @@ footer {
     letter-spacing: 0;
     padding: 12px 40px;
     margin-left: 15px;
+    transition: all 0.2s ease-in;
+    &:hover {
+      background-color: #fff;
+      color: $accentColor;
+    }
   }
 }
 
@@ -1697,6 +1768,11 @@ footer {
     @extend %btn-red;
     letter-spacing: 0;
     padding: 15px 36px;
+    transition: all 0.2s ease-in;
+    &:hover {
+      background-color: #fff;
+      color: $accentColor;
+    }
   }
 }
 
@@ -2172,6 +2248,11 @@ footer {
   }
   &__form-btn {
     @extend %btn-red;
+    transition: all 0.2s ease-in;
+    &:hover {
+      background-color: #fff;
+      color: $accentColor;
+    }
   }
 }
 
