@@ -231,7 +231,7 @@
   &__link {
     @extend %btn-red;
     padding: 18px 35px;
-    transition: all 0.2s ease-in;
+    transition: all 0.4s ease-in;
     &:hover {
       background-color: #fff;
       color: $accentColor;
@@ -1715,10 +1715,11 @@ footer {
   &__wrapper-input {
     margin-bottom: 30px;
     display: flex;
-    justify-content: space-between;
+  }
+  &__text-input + .comments-form__text-input {
+    margin-left: 30px;
   }
   &__text-input {
-    max-width: 570px;
     width: 100%;
     border: 1px solid #f0f0f0;
     padding: 14px 20px;
@@ -1811,9 +1812,10 @@ footer {
       background-color: #fff;
       border-radius: 50%;
       box-shadow: 0px 7px 20px 0px #a8a8a84d;
+      transition: 0.3s all ease-in-out;
       path {
         fill: $accentColor;
-        transition: 0.2s all ease-in-out;
+        transition: 0.3s all ease-in-out;
       }
       &:hover {
         background-color: $accentColor;
@@ -2094,9 +2096,6 @@ footer {
   }
   .comments-form {
     border-bottom: none;
-  }
-  .comments-form__text-input {
-    max-width: 370px;
   }
   .comments:last-of-type {
     border-bottom: 1px solid #ececec;
