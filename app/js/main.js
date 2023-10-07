@@ -39,18 +39,19 @@ $(function () {
   });
 
   $(".shop-content__filter-btn").on("click", function () {
-    $(".shop-content__filter-btn").removeClass(
-      "shop-content__filter-btn--active"
-    );
+    $(".shop-content__filter-btn").removeClass("shop-content__filter-btn--active");
     $(this).addClass("shop-content__filter-btn--active");
   });
 
+
   $(".button-list").on("click", function () {
     $(".product-item").addClass("product-item--list");
+    $(".shop-content__inner").addClass("shop-content__no-grid");
   });
 
   $(".button-grid").on("click", function () {
     $(".product-item").removeClass("product-item--list");
+    $(".shop-content__inner").removeClass("shop-content__no-grid");
   });
 
   $(".filter-price__input").ionRangeSlider({
@@ -133,3 +134,20 @@ document.querySelector(".menu__burger").addEventListener("click", function () {
   this.classList.toggle("menu__burger--active");
   document.querySelector(".menu__list").classList.toggle("menu__list--active");
 });
+
+const labels = document.querySelectorAll(".comments-form__wrapper");
+
+labels.forEach(label => {
+  const textInput = label.querySelector(".comments-form__text-input");
+  const placeholder = label.querySelector(".comments-form__placeholder");
+
+  placeholder.addEventListener("mouseover", () => {
+    textInput.style.borderColor = "#8d8d8d";
+  });
+
+  placeholder.addEventListener("mouseout", () => {
+    // Возвращайте цвет по умолчанию или просто убирайте стиль borderColor
+    textInput.style.borderColor = "#f0f0f0";
+  });
+});
+

@@ -95,19 +95,29 @@ a {
   &__item {
     padding: 0 15px;
   }
+  &__link {
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      color: $titleColor;
+    }
+  }
   &__link--active {
     color: $accentColor;
   }
   &__arrows {
     text-transform: uppercase;
     position: relative;
+    transition: all 0.2s ease-in-out;
     &::before {
       content: "";
       background-repeat: no-repeat;
       position: absolute;
       width: 5px;
       height: 10px;
-      top: 8px;
+      top: 9px;
+    }
+    &:hover {
+      color: $titleColor;
     }
   }
   &__prev {

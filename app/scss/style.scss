@@ -477,8 +477,8 @@
     }
     &:hover::before {
       transform: scale(2);
-top: 44%;
-left: 45%;
+      top: 44%;
+      left: 45%;
     }
   }
   &__content {
@@ -575,7 +575,7 @@ left: 45%;
   &.product-item--list {
     min-width: 100%;
     display: flex;
-    text-align-last: left;
+    text-align: left;
     &:hover {
       .product-item__link-box {
         transform: translateY(-280%);
@@ -1023,7 +1023,7 @@ footer {
 }
 
 .shop {
-  padding: 120px 0 105px;
+  padding-bottom: 105px;
   &__inner {
     display: flex;
   }
@@ -1713,25 +1713,23 @@ footer {
     }
   }
   &__wrapper-input {
-    margin-bottom: 30px;
     display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
   }
-  &__text-input + .comments-form__text-input {
-    margin-left: 30px;
+  &__wrapper {
+    width: 100%;
+    display: block;
+    position: relative;
   }
   &__text-input {
     width: 100%;
     border: 1px solid #f0f0f0;
     padding: 14px 20px;
     transition: all 0.2s ease-in;
-    &::placeholder {
-      color: $defaultColor;
-    }
-    &:hover::placeholder {
-      color: $titleColor;
-    }
+    position: relative;
     &:hover {
-      border-color: $titleColor;
+      border-color: $titleColor !important;
     }
     &:active {
       border-color: $titleColor;
@@ -1739,6 +1737,34 @@ footer {
     &:focus {
       border-color: $defaultColor;
     }
+  }
+  &__placeholder {
+    position: absolute;
+    top: 0;
+    margin: 14px 20px;
+    padding: 0 8px;
+    display: block;
+    cursor: text;
+    white-space: nowrap;
+    transition: all 0.2s ease-in-out;
+    &:hover + .comments-form__text-input {
+      input {
+        border: 1px solid $titleColor;
+      }
+    }
+  }
+
+  input:focus,
+  textarea:focus {
+    color: $accentColor;
+    border: 1px solid $accentColor;
+  }
+  input:focus + .comments-form__placeholder,
+  textarea:focus + .comments-form__placeholder {
+    color: #fff;
+    transform: translate(-12px, -27px) scale(0.8);
+    background-color: $accentColor;
+    z-index: 10;
   }
   &__textarea {
     border: 1px solid #f0f0f0;
@@ -1748,10 +1774,8 @@ footer {
     min-height: 225px;
     max-height: 325px;
     resize: vertical;
+    display: block;
     transition: all 0.2s ease-in;
-    &::placeholder {
-      color: $defaultColor;
-    }
     &:hover::placeholder {
       color: $titleColor;
     }
@@ -1764,6 +1788,9 @@ footer {
     &:focus {
       border-color: $defaultColor;
     }
+  }
+  &__textarea-wrapper {
+    position: relative;
   }
   &__btn {
     @extend %btn-red;
@@ -1980,6 +2007,7 @@ footer {
     }
   }
 }
+
 .blog-one {
   &__text {
     h4 {
@@ -2094,8 +2122,16 @@ footer {
     border: none;
     margin: 35px 0 25px;
   }
+  // --------------------------------------------------------------------------------------------------
   .comments-form {
     border-bottom: none;
+    &__text-input {
+      position: relative;
+      display: block;
+      &:first-child {
+        margin-right: 30px;
+      }
+    }
   }
   .comments:last-of-type {
     border-bottom: 1px solid #ececec;
@@ -2161,6 +2197,7 @@ footer {
     margin-top: 55px;
     padding-left: 80px;
     color: $titleColor;
+    display: block;
     position: relative;
     &::before {
       content: "";
@@ -2212,9 +2249,7 @@ footer {
   &__form-input-wrapper {
     display: flex;
     justify-content: space-between;
-    input {
-      width: 330px;
-    }
+    gap: 30px;
   }
   &__form-input,
   &__form-textarea {
