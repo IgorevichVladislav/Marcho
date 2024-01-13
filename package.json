@@ -1,7 +1,6 @@
 {
   "name": "others-m",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -34,5 +33,7 @@
   "dependencies": {
     "gulp-imagemin": "^7.1.0",
     "gulp-newer": "^1.4.0"
-  }
+  },
+  "keywords": [],
+  "description": ""
 }
